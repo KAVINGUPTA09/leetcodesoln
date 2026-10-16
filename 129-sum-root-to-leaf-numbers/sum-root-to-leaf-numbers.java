@@ -20,7 +20,6 @@ class Solution {
         if(root.left==null && root.right==null){
             return Integer.parseInt(sum);
         }
-
         int left=sum(root.left,sum);
         int right=sum(root.right,sum);
         return left+right;
