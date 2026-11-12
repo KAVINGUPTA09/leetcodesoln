@@ -15,13 +15,15 @@ class Solution {
         }
         while(low<=high){
             long mid=low+(high-low)/2;
-            long x=0;
+            long totalchild=0;
             for(int i=0;i<candies.length;i++){
-            x+=candies[i]/mid;
+            totalchild+=candies[i]/mid;
             }
-            if(x>=k){
+            if(totalchild>=k){
+                //totalchild>=k kyuki jyada candies hai no prb then 
+                //tb divide me prb nhi hoga
                 ans=mid;
-                
+                //as asked max go right
                  low=mid+1;
             }
             else{
